@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Versions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="hero-card">
+            <p class="eyebrow">Interactive Project Showcase</p>
+            <h1>Calculator With Feature Versions</h1>
+            <p class="hero-copy">
+                Explore how the calculator evolves from a simple arithmetic tool into a full scientific calculator.
+                Switch versions to unlock new features and test them instantly.
+            </p>
+            <div class="hero-stats">
+                <div>
+                    <span class="stat-label">Versions</span>
+                    <strong>4</strong>
+                </div>
+                <div>
+                    <span class="stat-label">Modes</span>
+                    <strong>Basic to Scientific</strong>
+                </div>
+                <div>
+                    <span class="stat-label">Supports</span>
+                    <strong>Memory + History</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-card">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Version Control</p>
+                    <h2 id="version-title">Version 1.0</h2>
+                </div>
+                <span id="feature-badge" class="badge">Basic Arithmetic</span>
+            </div>
+
+            <div class="version-grid" id="version-grid">
+                <button class="version-tile active" data-version="1">
+                    <span>V1.0</span>
+                    <small>Basic</small>
+                </button>
+                <button class="version-tile" data-version="2">
+                    <span>V2.0</span>
+                    <small>Advanced</small>
+                </button>
+                <button class="version-tile" data-version="3">
+                    <span>V3.0</span>
+                    <small>Memory</small>
+                </button>
+                <button class="version-tile" data-version="4">
+                    <span>V4.0</span>
+                    <small>Scientific</small>
+                </button>
+            </div>
+
+            <div class="operation-panel">
+                <label for="operation-select">Operation</label>
+                <select id="operation-select"></select>
+            </div>
+
+            <div class="input-grid">
+                <div class="field">
+                    <label for="input-a" id="label-a">First Number</label>
+                    <input id="input-a" type="number" step="any" placeholder="Enter value">
+                </div>
+                <div class="field" id="field-b">
+                    <label for="input-b" id="label-b">Second Number</label>
+                    <input id="input-b" type="number" step="any" placeholder="Enter value">
+                </div>
+            </div>
+
+            <button id="calculate-btn" class="primary-btn">Calculate</button>
+
+            <div class="result-card">
+                <span class="result-label">Latest Result</span>
+                <strong id="result-display">0</strong>
+                <p id="result-expression">Choose a version and run a calculation.</p>
+            </div>
+
+            <div class="memory-panel">
+                <div class="memory-header">
+                    <h3>Memory Controls</h3>
+                    <span id="memory-value">Memory: 0</span>
+                </div>
+                <div class="memory-actions">
+                    <button class="secondary-btn" id="memory-add-btn">M+</button>
+                    <button class="secondary-btn" id="memory-subtract-btn">M-</button>
+                    <button class="secondary-btn" id="memory-recall-btn">MR</button>
+                    <button class="secondary-btn" id="memory-clear-btn">MC</button>
+                </div>
+                <p id="memory-note" class="helper-text">Memory features unlock in Version 3.0 and above.</p>
+            </div>
+        </section>
+
+        <section class="history-card">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Output Timeline</p>
+                    <h2>Calculation History</h2>
+                </div>
+                <button id="clear-history-btn" class="ghost-btn">Clear History</button>
+            </div>
+            <ul id="history-list" class="history-list">
+                <li class="history-empty">No calculations yet.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
