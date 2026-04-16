@@ -8,9 +8,9 @@ class ScientificCalculator:
         self.memory = 0
         self.history = []
     
-    def add(self, a, b):
-        self.result = a + b
-        self.history.append(f"{a} + {b} = {self.result}")
+    def mod(self, a, b):
+        self.result = a % b
+        self.history.append(f"{a} % {b} = {self.result}")
         return self.result
     
     def subtract(self, a, b):
